@@ -1,20 +1,35 @@
+
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
+	background:#151414;
+	color:#d0d0d0;
 }
+
+.about-me-text p {
+	font-size:17pt;
+}
+
+
 .header {
-	height: 500px;
-	background: url('img/header_bg.jpg') no-repeat;
+	height: 150px;
 	background-size: cover;
 }
+
+h1 {
+	padding-top:35px;
+}
+
 .header a {
-	font-size: 24pt;
+	font-size: 25pt;
 	color: #fff;
 	margin-top: 50px;
 	margin-left: 50px;
+	margin-bottom:100px;
 	display: block;
-	text-transform: uppercase;
 	text-decoration: none;
+	text-align:center;
+	font-family:arial;
 }
 .header p {
 	font-size: 42pt;
@@ -30,7 +45,7 @@ body {
 
 @media screen and (max-width:760px) {
 	.header {
-		height: 300px;
+		height: 100px;
 	}
 	.header a {
 		display: none;
@@ -43,16 +58,66 @@ body {
 		transform: translate(-50%,-50%);
 		font-size: 32pt;
 	}
+	.header img {
+		width:20px;
+		height:20px;
+	}
+}
+
+.hamburger {
+	display:none;
+	line-height:100px;
+	background-color: gray;
+	padding-right: 50px;
+	text-align:left;
+	padding-left:40px;
+}
+
+.hamburger .glyphicon {font-size:24pt;
+cursor: pointer;
+	
+}
+
+@media screen and (max-width:760px) {
+	.main-menu {
+		margin-top:0px;
+		padding: 0;
+		display:none;
+	}
+	.main-menu li {
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin-top:0px;
+	}
+	.main-menu li a {
+		margin-top:0px;
+	}
+	.hamburger{
+		
+		display:block;
+	}
+}
+
+@media screen and(min-width:761px){
+	.main-menu{
+		.display:block!important;
+	}
+	
+	
 }
 
 .main-menu {
 	width: 100%;
-	background-color: #F1C40F;
+	background: gray ;
+	text-align:center;
 }
+
 .main-menu li {
 	display: inline-block;
 	height: 100px;
 	transition: 3s;
+	text-align:center;
 }
 .main-menu li a {
 	color: #000;
@@ -61,9 +126,17 @@ body {
 	padding-right: 40px;
 	line-height: 100px;
 	display: block;
+	text-align:center;
 }
 .main-menu li:hover {
-	background-color: #EB5757;
+	background-color:green;
+}
+.main-menu li:hover a {
+	text-decoration: none;
+	color: #fff;
+}
+.main-menu li:hover {
+	background-color: #403c3c;
 }
 .main-menu li:hover a {
 	text-decoration: none;
@@ -76,18 +149,23 @@ body {
 		padding: 0;
 	}
 	.main-menu li {
-		display: block;
+		display: inline;
 		text-align: center;
 		width: 100%;
 	}
 }
+.gallery1 img {
+	width: 100%;
+	margin-left:100px;
 
+}
 
 .gallery img {
 	width: 100%;	
+
 }
 .gallery div {
-	padding: 0;
+	padding: 10px;
 }
 
 .overlay {
@@ -101,12 +179,13 @@ body {
 	transition: 1s ease;
 }
 
+
 .image-container:hover .overlay {
-	opacity: 0.7;
+	opacity: 0.7;	
 }
 
 .image-container:hover img {
-	filter: blur(3px);
+	filter: none;
 }
 .overlay p {
 	position: absolute;
@@ -123,7 +202,7 @@ body {
 
 
 .contact-form {	
-	background-color: #F1C40F;
+	background-color: gray;
 	padding: 100px;
 }
 .contact-form h1 {
@@ -156,45 +235,46 @@ body {
 	}
 }
 
-
+.footer img {
+	margin-right:20px;
+	margin-top:20px;
+	float:right;
+	width:230px;
+	height:40px;
+}
 
 .footer {
-	height: 400px;
-	background: url('img/footer_bg.jpg') no-repeat;
+	height: 100px;
+	background:gray;
 	background-size: cover;
+	margin-top:50px;
 }
-.footer img {
-	margin: 100px 0 0 100px;
-}	
+	
 .footer ul {
-	margin-top: 100px;
-	float: right;
+	margin-top: 0px;
+	text-align: left;
 }
 .footer ul li {
-	display: inline-block;
+	display: inline;
 }
 .footer ul li a {
-	color: #fff;
-	font-size: 18pt;
-	padding-left: 30px;
-	padding-right: 30px;
-	display: block;
+	color: black;
+	font-size: 16pt;
+	padding-left: 5px;
+	padding-right:5px;
+	display: inline;
 	text-decoration: none;
 }
 
 @media screen and (max-width:760px) { 
-	.footer img {
-		width: 50%;
-		margin: 80px auto 0 auto;
-		display: block;
-	}
+	
 	.footer ul {
-		margin: 80px 0 0 0;
-		text-align: center;
+		margin: 5px 0 0 0;
+		text-align: left;
 		float: none;
 	}
 	.footer ul li {
-		display: block;
+		display: inline;
 	}
 }
 
@@ -238,7 +318,7 @@ body {
 	padding-right: 40px !important;
 }
 .section-title {
-	margin-top: 40px;
+	margin-top: 50px;
 	margin-bottom: 20px;
 	text-align: center;
 	text-transform: uppercase;
@@ -252,7 +332,4 @@ body {
 .square-blocks a:hover {
 	color: #F1C40F;
 	text-decoration: none;
-}
-#vegas {
-	height: 500px;
 }
